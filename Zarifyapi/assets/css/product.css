@@ -1,0 +1,953 @@
+@charset "UTF-8";
+.solust-resim-container:hover .solust-resim,
+.kucuk-resim-container:hover .kucuk-resim,
+.kucuk-resim-container:hover .kucuk-resim2,
+.kucuk-resim-container:hover .kucuk-resim3,
+.kucuk-resim-container:hover .kucuk-resim4 {
+    transform: scale(1.1);
+    /* %10 büyüme */
+    transition: transform 0.3s ease;
+    /* Dönüşümü yumuşaklaştırmak için geçiş efekti */
+}
+
+/* kayan yazı */
+
+.heading,
+.clients .section-header h2,
+.section-head h1,
+.testimonials .section-header h2,
+.section-head-1 h4 {
+    margin: 2rem;
+    padding-top: 6rem;
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #d45c1b;
+    position: relative;
+    letter-spacing: .2rem;
+}
+
+.heading::before,
+.heading::after,
+.clients .section-header h2::before,
+.clients .section-header h2::after,
+.section-head h1::before,
+.section-head h1::after,
+.testimonials .section-header h2::before,
+.testimonials .section-header h2::after,
+.section-head-1 h4::before,
+.section-head-1 h4::after {
+    content: '';
+    position: absolute;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-top: .4rem solid #002e5f;
+    border-left: .4rem solid #002e5f;
+}
+
+.heading::before,
+.clients .section-header h2::before,
+.section-head h1::before,
+.testimonials .section-header h2::before,
+.section-head-1 h4::before {
+    top: 5.8rem;
+    left: -2rem;
+}
+
+.heading::after,
+.clients .section-header h2::after,
+.section-head h1::after,
+.testimonials .section-header h2::after,
+.section-head-1 h4::after {
+    bottom: -.5rem;
+    right: -2rem;
+    transform: rotate(180deg);
+}
+
+.clients {
+    position: relative;
+    padding: 90px 0;
+    text-align: center;
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+}
+
+.clients .section-header p {
+    padding-bottom: 10px;
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.clients img {
+    max-width: 100%;
+    opacity: 1;
+    transition: 0.3s;
+    padding: 15px 0;
+}
+
+.clients img:hover {
+    opacity: .5;
+}
+
+.clients .owl-nav,
+.clients .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.clients .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.clients .owl-dot.active {
+    background-color: #4F84C4;
+}
+
+.owl-carousel.clients-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-carousel.clients-carousel img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+    /* İsteğe bağlı olarak logoların maksimum genişliği ayarlanabilir */
+    margin: 0 10px;
+    /* İsteğe bağlı olarak logolar arasındaki boşluk ayarlanabilir */
+}.example {
+    text-align: center;
+    margin-top: 650px;
+    border: 2px solid;
+    padding: 20px;
+}body,
+html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Diğer stilleri değiştirmeden ekleyin */
+.solust-resim-container {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    left: 100px;
+    /* Soldan 100px mesafede */
+    width: 300px;
+    height: 300px;
+}
+
+/* Resim */
+.solust-resim {
+    width: 100%;
+    height: 100%;
+}
+
+/* Sağ taraftaki liste kapsayıcısı */
+.sag-liste-kapsayici {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    right: 300px;
+    /* Sağdan 100px mesafede */
+    width: 300px;
+}
+
+/* Sağ taraftaki liste stilleri */
+.sag-liste {
+    list-style-type: disc;
+    /* Noktalı liste olarak biçimlendirme */
+    padding-left: 20px;
+    /* Sol kenardan boşluk */
+}
+
+/* Alt liste stilleri */
+.alt-liste {
+    list-style-type: circle;
+    /* Yuvarlak işaretli liste olarak biçimlendirme */
+    padding-left: 20px;
+    /* Sol kenardan boşluk */
+}
+
+/* Küçük resimlerin kapsayıcısı */
+.kucuk-resim-container {
+    margin-top: 20px;
+}
+
+/* Küçük resimlerin stili */
+.kucuk-resim {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    left: 450px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.kucuk-resim2 {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    left: 570px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.kucuk-resim3 {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    left: 690px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.kucuk-resim4 {
+    position: absolute;
+    top: 200px;
+    /* Sol üsten 200px mesafede */
+    left: 810px;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 1510px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 200px;
+        /* Sol üsten 200px mesafede */
+        right: 80px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .example {
+        text-align: center;
+        margin-top: 1050px;
+        border: 2px solid;
+        padding: 20px;
+    }
+
+    .solust-resim-container {
+        position: relative;
+        top: 80;
+        left: 0;
+        margin: 0 auto;
+        width: 74%;
+    }
+
+    .solust-resim {
+        width: 100%;
+        height: auto;
+    }
+
+    .sag-liste-kapsayici {
+        position: absolute;
+        top: 1120px;
+        /* Sol üsten 200px mesafede */
+        right: 730px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }
+
+    .kucuk-resim-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .kucuk-resim-container {
+        justify-content: center;
+    }
+
+    .kucuk-resim {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 155px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 385px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 615px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 850px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }}
+
+@media (max-width: 1030px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 1120px;
+        /* Sol üsten 200px mesafede */
+        right: 630px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 125px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 355px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 575px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 820px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 965px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 1120px;
+        /* Sol üsten 200px mesafede */
+        right: 630px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 870px;
+        /* Sol üsten 200px mesafede */
+        left: 325px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 870px;
+        /* Sol üsten 200px mesafede */
+        left: 545px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 870px;
+        /* Sol üsten 200px mesafede */
+        left: 790px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 985px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 1120px;
+        /* Sol üsten 200px mesafede */
+        right: 630px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 325px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 545px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        left: 790px;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}@media (max-width: 985px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 1000px;
+        /* Sol üsten 200px mesafede */
+        right: 530px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 800px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 800px;
+        /* Sol üsten 200px mesafede */
+        left: 275px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 800px;
+        /* Sol üsten 200px mesafede */
+        left: 455px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 800px;
+        /* Sol üsten 200px mesafede */
+        left: 650px;
+        width: 150px;
+        height: 150px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}@media (max-width: 820px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 900px;
+        /* Sol üsten 200px mesafede */
+        right: 430px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 700px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 120px;
+        height: 120px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 700px;
+        /* Sol üsten 200px mesafede */
+        left: 245px;
+        width: 120px;
+        height: 120px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 700px;
+        /* Sol üsten 200px mesafede */
+        left: 395px;
+        width: 120px;
+        height: 120px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 700px;
+        /* Sol üsten 200px mesafede */
+        left: 550px;
+        width: 120px;
+        height: 120px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 730px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 800px;
+        /* Sol üsten 200px mesafede */
+        right: 100px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 620px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 620px;
+        /* Sol üsten 200px mesafede */
+        left: 225px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 620px;
+        /* Sol üsten 200px mesafede */
+        left: 355px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 620px;
+        /* Sol üsten 200px mesafede */
+        left: 490px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}@media (max-width: 610px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 750px;
+        /* Sol üsten 200px mesafede */
+        right: 100px;
+        /* Sağdan 100px mesafede */
+        width: 300px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 55px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 185px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 315px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 450px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 555px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 750px;
+        /* Sol üsten 200px mesafede */
+        right: 100px;
+        /* Sağdan 100px mesafede */
+        width: 400px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 30px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 165px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 295px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 430px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}@media (max-width: 525px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 750px;
+        /* Sol üsten 200px mesafede */
+        right: 100px;
+        /* Sağdan 100px mesafede */
+        width: 400px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 10px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 145px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 275px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 410px;
+        width: 110px;
+        height: 110px;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 505px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 750px;
+        /* Sol üsten 200px mesafede */
+        right: 100px;
+        /* Sağdan 100px mesafede */
+        width: 320px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 10px;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 115px;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 220px;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 330px;
+        width: 90px;
+        height: 90px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 425px) {    .sag-liste-kapsayici {
+        position: absolute;
+        top: 750px;
+        /* Sol üsten 200px mesafede */
+        right: 50px;
+        /* Sağdan 100px mesafede */
+        width: 320px;
+    }    .kucuk-resim {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 10px;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim2 {
+        position: absolute;
+
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 95px;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim3 {
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 180px;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+
+    .kucuk-resim4 {
+        position: absolute;
+        top: 600px;
+        /* Sol üsten 200px mesafede */
+        left: 270px;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #ccc;
+        margin-top: 0px;
+        cursor: pointer;
+    }
+}
+ 
